@@ -45,7 +45,7 @@ public class agregarUsuario {
         this.password = password;
     }
     
-    public void GuardarPersona(String usuario, String password)
+    public void CrearUsuario(String usuario, String password)
     {
         try
         {
@@ -66,4 +66,4 @@ public class agregarUsuario {
     
     
     
-}
+
