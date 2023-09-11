@@ -2,7 +2,6 @@ package modelo;
 
 import java.sql.*;
 import javax.swing.JOptionPane;
-import modelo.conexion;
 
 /**
  *
@@ -52,8 +51,8 @@ public class agregarUsuario {
           conexion nuevaConexion = new conexion();
           this.myConexion = nuevaConexion.Conectar();
           Statement sentencia = myConexion.createStatement();
-          sentencia.execute("insert into PERSONAS values('"+this.getUsuario()+"', '"+this.getPassword()+"')");
-          
+          sentencia.execute("CREATE USER '" + usuario + "'@'localhost' IDENTIFIED BY '" + password + "'");
+          JOptionPane.showMessageDialog(null, "Usuario Creado");
         }
         catch(SQLException e)
         {

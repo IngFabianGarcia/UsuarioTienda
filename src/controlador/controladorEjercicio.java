@@ -36,6 +36,13 @@ public class controladorEjercicio implements ActionListener{
             this.vistaCrear.setVisible(true);
             this.vistaCrear.setLocationRelativeTo(null);
     }
+        if(e.getSource()== this.vistaCrear.btnCrear){
+            this.nuevoUsuario.CrearUsuario(this.vistaCrear.txtUsuario.getText(), 
+                    this.vistaCrear.txtContraseña.getText());
+            
+            this.vistaCrear.txtUsuario.setText("");
+            this.vistaCrear.txtContraseña.setText("");
+        }
         
     }
     

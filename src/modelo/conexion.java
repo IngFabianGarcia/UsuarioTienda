@@ -22,13 +22,12 @@ public class conexion {
         {
             
             Class.forName("com.mysql.cj.jdbc.Driver");
-            
             String url ="jdbc:mysql://localhost:3306/tienda";
             String usuario = "root";
             String password = "";
             
             conexion = DriverManager.getConnection(url, usuario, password);
-            JOptionPane.showMessageDialog(null, "Conexion Exitosa");
+            
             return conexion;
             
         }
